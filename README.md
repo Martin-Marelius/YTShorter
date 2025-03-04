@@ -3,12 +3,11 @@
 This project processes videos by merging text, voiceovers, background music, and captions. It allows users to customize voiceovers, video volume, and song selection while ensuring high-quality output.
 
 ## Processed Video Example 🎥  
-<video width="640" height="360" controls>
-  <source src="https://github.com/Martin-Marelius/YTShorter/raw/master/showcase/video.mp4" type="video/mp4">
-</video>  
+[Original video (streamable)](https://streamable.com/48ufwf)
+[Processed video (streamable)](https://streamable.com/eg8vlc)
 
 ## Chrome Extension Preview 🖼️  
-<img src="showcase/extension.PNG" width="640" height="360" alt="Chrome Extension Preview">
+<img src="showcase/extension.PNG" width="640" alt="Chrome Extension Preview">
 
 ## Features ✨  
 - **Video Processing**: Combines video, voiceovers, and background music seamlessly.  
