@@ -4,6 +4,7 @@ This project processes videos by merging text, voiceovers, background music, and
 
 ## Processed Video Example 🎥  
 [Original video (streamable)](https://streamable.com/48ufwf)
+
 [Processed video (streamable)](https://streamable.com/eg8vlc)
 
 ## Chrome Extension Preview 🖼️  
