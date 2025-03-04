@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save URL and Form Data</title>
+    <script src="popup.js" defer></script>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling for dark theme */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2f2f2f;
+            color: #fff;
+            padding: 20px;
+            width: 500px; /* Set the desired width */
+            min-width: 500px; /* Ensure it doesn't shrink on smaller screens */
+            height: auto;
+            overflow: hidden;
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        form {
+            display: flex;
+            flex-direction: column;
+            min-width: 500px;
+        }
+
+        label {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        input[type="text"],
+        textarea,
+        select,
+        input[type="file"] {
+            background-color: #444;
+            color: #fff;
+            border: 1px solid #555;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            width: 100%; /* Make the input fields fill the available width */
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus,
+        input[type="file"]:focus {
+            outline: none;
+            border-color: #00aaff;
+        }
+
+        .voiceLengthContainer {
+            display: flex;
+            flex-direction: row;
+            max-width: fit-content;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        input[type="file"] {
+            padding: 0;
+        }
+
+        input[type="text"]::placeholder {
+            color: #888;
+        }
+
+        /* Responsiveness for smaller screens */
+        @media screen and (max-width: 600px) {
+            body {
+                width: 100%;
+                padding: 10px;
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Video Details</h2>
+    <form id="dataForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required placeholder="Enter title">
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required placeholder="Enter description"></textarea>
+
+        <label for="voice1">Voice 1:</label>
+        <textarea type="text" id="voice1" name="voice1" required placeholder="Enter Voice 1 name"></textarea>
+
+        <label for="voice2">Voice 2:</label>
+        <textarea type="text" id="voice2" name="voice2" placeholder="Enter Voice 2 name"></textarea>
+
+        <div id="voiceLengthContainer">
+            <!-- New button to get voice lengths -->
+            <button type="button" id="getVoiceLengthBtn">Get Voice Lengths</button>
+            <label for="voiceLength">
+                Voice Length Preview (seconds):
+                <input type="text" id="voiceLength" name="voiceLength" readonly>
+            </label>
+        </div>
+
+        <label for="volume">Volume of video:</label>
+        <input type="text" id="volume" name="volume" placeholder="video volume (0.0 to 1.0)">
+    
+        <label for="captionPosition">Caption Position:</label>
+        <select id="captionPosition" name="captionPosition">
+            <option value="top">Top</option>
+            <option value="bottom">middle</option>
+            <option value="bottom">Bottom</option>
+        </select>
+
+        <label for="song">Choose Song:</label>
+        <select id="song" name="song">
+            <option value="ambient">Ambient</option>
+            <option value="playful">Playful</option>
+            <option value="cool">Cool</option>
+            <option value="mysterious">Mysterious</option>
+            <option value="curious">Curious</option>
+        </select>
+
+        <label for="tags">Tags:</label>
+        <input type="text" id="tags" name="tags" placeholder="Comma-separated tags">
+
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

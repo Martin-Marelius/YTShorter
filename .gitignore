@@ -1,0 +1,23 @@
+# Ignore video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+
+# Ignore audio files
+*.mp3
+*.wav
+*.aac
+*.flac
+*.ogg
+
+*.txt
+*.ttf
+
+*.onnx
+*.bin
+
+# Ignore specific folders
+videos/*
+src/app/assets/*
