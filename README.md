@@ -33,11 +33,3 @@ This project processes videos by merging text, voiceovers, background music, and
     ```
 2. Open the Chrome extension by loading the  directory as an unpacked extension in Chrome.
 3. Use the extension UI to configure your video processing settings and start processing.
-
-## Contributing 🤝
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-## License 📄
-
-This project is licensed under the MIT License. See the LICENSE file for details.
